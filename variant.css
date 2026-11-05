@@ -1,0 +1,491 @@
+/* Вариант Б — стили новых средних секций.
+   Используются только переменные из :root в styles.css и шрифт Stolzl. */
+
+.v-section { padding: 96px 0; }
+
+.prototype-bar {
+  padding: 20px 28px;
+  font-size: 28px;
+  letter-spacing: .06em;
+  line-height: 1.2;
+}
+
+.hero .button--accent { gap: 10px; }
+
+/* Правый край текста не переходит середину экрана и не шире своего блока. */
+.hero > .page-shell.hero-copy {
+  --hero-inset: max(20px, (100vw - 1400px) / 2);
+  width: min(640px, calc(50vw - var(--hero-inset) - 24px));
+  max-width: calc(50vw - var(--hero-inset) - 24px);
+  min-width: 0;
+  margin-left: var(--hero-inset);
+  overflow: hidden;
+}
+
+.hero > .page-shell.hero-copy h1,
+.hero > .page-shell.hero-copy .hero-kicker,
+.hero > .page-shell.hero-copy .hero-lead {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.button__arrow {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+}
+
+/* ---------- #check — чек-лист «Три признака» ---------- */
+
+.v-check__intro { max-width: 720px; }
+
+.v-check__intro h2 { font-size: 40px; font-weight: 400; line-height: 1.2; }
+
+.v-check__lead {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.v-check__list {
+  margin: 56px 0 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid rgba(39, 36, 45, .15);
+}
+
+.v-check__row {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  border-top: 1px solid rgba(39, 36, 45, .15);
+  padding: 32px 0;
+}
+
+.v-check__index {
+  color: var(--navy);
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.v-check__title {
+  color: var(--ink);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.v-oval {
+  display: inline-block;
+  padding: 0.04em 0.55em 0.08em;
+  border-radius: 999px;
+  background: var(--navy);
+  color: var(--white);
+  line-height: 1.25;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+.v-check__text {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+/* ---------- #scheme — синяя полоса с белыми карточками ---------- */
+
+.v-scheme {
+  color: var(--white);
+  background: var(--navy);
+}
+
+.v-scheme__intro { max-width: 720px; }
+
+.v-scheme__kicker { color: var(--white); }
+
+#scheme-title.v-scheme__title {
+  color: var(--white);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.v-scheme__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 56px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.v-scheme__card {
+  min-height: 200px;
+  border-radius: 20px;
+  padding: 32px;
+  background: var(--white);
+}
+
+.v-scheme__index {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--navy);
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.v-scheme__card-title {
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* ---------- #payments — сетка плиток-ссылок ---------- */
+
+/* Сброс правил для #payments из styles.css (там синий скруглённый блок). */
+#payments {
+  padding: 96px 0 48px;
+  border-bottom: 0;
+}
+
+.v-join {
+  display: grid;
+  height: 96px;
+  place-items: center;
+}
+
+.v-join__arc {
+  position: relative;
+  width: min(920px, calc(100% - 80px));
+  height: 64px;
+  border-bottom: 3px solid var(--navy);
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+
+.v-join__arc::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 16px;
+  height: 16px;
+  border-right: 3px solid var(--navy);
+  border-bottom: 3px solid var(--navy);
+  background: var(--paper);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+#payments .page-shell {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+}
+
+.v-payments__grid {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.v-payments__intro { min-width: 0; }
+
+#payments #payments-title.v-payments__title {
+  color: var(--ink);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+.v-payments__links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  min-width: 0;
+}
+
+.v-nav-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 168px;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 22px;
+  color: var(--white);
+  background-color: var(--navy);
+  background-position: center;
+  background-size: cover;
+  text-decoration: none;
+  isolation: isolate;
+}
+
+.v-nav-card--memo { background-image: url("assets/nav-memo.jpg"); }
+.v-nav-card--request { background-image: url("assets/nav-request.jpg"); }
+.v-nav-card--docs { background-image: url("assets/nav-docs.jpg"); }
+
+.v-nav-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 46, 103, .2) 0%, rgba(8, 22, 58, .78) 100%);
+}
+
+.v-nav-card:hover::before {
+  background: linear-gradient(180deg, rgba(15, 46, 103, .35) 0%, rgba(8, 22, 58, .88) 100%);
+}
+
+.v-nav-card__copy,
+.v-nav-card__arrow { position: relative; }
+
+.v-nav-card__copy { min-width: 0; }
+
+.v-nav-card__copy strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.v-nav-card__copy span {
+  display: block;
+  max-width: 32ch;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, .86);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.v-nav-card__arrow {
+  display: grid;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .22);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.v-nav-card:hover .v-nav-card__arrow {
+  background: var(--white);
+  color: var(--navy);
+}
+
+/* ---------- #actions — карточная композиция контактов ---------- */
+
+#actions {
+  padding-top: 48px;
+  padding-bottom: 96px;
+}
+
+.v-actions__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.v-actions__intro { min-width: 0; }
+
+#actions #actions-title.v-actions__title {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.v-actions__contacts {
+  display: flex;
+  align-self: flex-start;
+  min-width: 0;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.v-actions__phone {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 20px;
+  padding: 32px;
+  color: var(--white);
+  background: var(--navy);
+  text-decoration: none;
+}
+
+.v-actions__phone-label {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.v-actions__phone-number {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.v-actions__phone:hover .v-actions__phone-number { text-decoration: underline; text-underline-offset: 6px; }
+
+.v-actions__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.v-actions__card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 20px;
+  padding: 24px;
+  background: var(--white);
+  text-decoration: none;
+}
+
+.v-actions__card-label {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.v-actions__card-value {
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+a.v-actions__card .v-actions__card-value { color: var(--navy); }
+a.v-actions__card:hover .v-actions__card-value { text-decoration: underline; text-underline-offset: 4px; }
+
+.v-actions__note {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* ---------- #share — узкая центрированная композиция ---------- */
+
+.v-share {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.v-share__inner {
+  max-width: 640px;
+  text-align: center;
+}
+
+#share #share-title.v-share__title {
+  color: var(--white);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.v-share__text {
+  margin-top: 20px;
+  color: rgba(255, 255, 255, .82);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.v-share__button {
+  gap: 10px;
+  margin-top: 36px;
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--navy);
+  font-size: 18px;
+}
+
+.v-share__icon {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+}
+
+.v-share__button:hover {
+  border-color: var(--white);
+  background: transparent;
+  color: var(--white);
+}
+
+/* ---------- Адаптив ---------- */
+
+@media (min-width: 1680px) {
+  .v-check__intro h2,
+  #scheme-title.v-scheme__title,
+  #actions #actions-title.v-actions__title,
+  #payments #payments-title.v-payments__title,
+  #share #share-title.v-share__title { font-size: 48px; line-height: 1.2; }
+}
+
+@media (max-width: 959px) {
+  .v-section { padding: 64px 0; }
+  #payments { padding: 64px 0 32px; }
+  #actions { padding-top: 32px; padding-bottom: 64px; }
+
+  .v-check__intro h2,
+  #scheme-title.v-scheme__title,
+  #actions #actions-title.v-actions__title,
+  #payments #payments-title.v-payments__title,
+  #share #share-title.v-share__title { font-size: 32px; line-height: 1.2; }
+
+  .v-join { height: 80px; }
+  .v-join__arc { width: calc(100% - 40px); height: 48px; }
+
+  .v-check__list { margin-top: 40px; }
+
+  .v-check__row {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 12px 24px;
+  }
+
+  .v-check__index {
+    grid-row: 1 / span 2;
+    font-size: 40px;
+  }
+
+  .v-check__text { grid-column: 2; }
+
+  .v-scheme__list {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+
+  .v-scheme__card { min-height: 0; }
+
+  .v-payments__grid,
+  .v-actions__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 799px) {
+  .hero > .page-shell.hero-copy {
+    width: calc(100% - 24px);
+    max-width: none;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: visible;
+  }
+
+  .prototype-bar { padding: 14px 16px; font-size: 18px; }
+  .v-actions__phone-number { font-size: 30px; }
+  .v-actions__row { grid-template-columns: 1fr; }
+  .v-share__button { width: 100%; }
+}
