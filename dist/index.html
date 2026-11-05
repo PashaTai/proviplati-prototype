@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ПРОТОТИП СТРАНИЦЫ - ПРИМЕР ВЕРСТКИ</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="prototype-bar">ПРОТОТИП СТРАНИЦЫ - ПРИМЕР ВЕРСТКИ</div>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="brand" href="https://провыплаты.рф/" aria-label="Провыплаты — главная">
+            <img src="https://static.tildacdn.com/tild3137-3639-4436-b132-623639353838/54534.svg" alt="СОГАЗ">
+          </a>
+
+          <nav class="desktop-nav" aria-label="Основная навигация">
+            <button type="button" data-dialog="payments-dialog">ВЫПЛАТЫ</button>
+            <button type="button" data-dialog="terms-dialog">СРОКИ</button>
+            <a href="https://провыплаты.рф/careprogram">ПРОГРАММА ЗАБОТЫ</a>
+            <button type="button" data-dialog="documents-dialog">ДОКУМЕНТЫ</button>
+            <button type="button" data-dialog="cases-dialog">ОСОБЫЕ СЛУЧАИ</button>
+            <button type="button" data-dialog="minor-dialog">НЕСОВЕРШЕННОЛЕТНИМ</button>
+          </nav>
+
+          <a class="search-link" href="https://провыплаты.рф/#popup:search" aria-label="Поиск">
+            <img src="https://static.tildacdn.com/tild3837-6163-4633-a264-323661316137/searc3434h.svg" alt="">
+          </a>
+
+          <button class="menu-button" type="button" data-dialog="mobile-menu" aria-label="Открыть меню" aria-expanded="false">
+            <img src="https://static.tildacdn.com/tild3030-3665-4663-a264-663365373761/Frame_1321316294.svg" alt="">
+          </button>
+        </div>
+      </header>
+
+      <div class="hero__inner page-container">
+        <div class="hero__copy">
+          <h1 id="page-title">🔹Осторожно, мошенники! СОГАЗ предупреждает о краже данных под видом «перерасчета выплат» семьям бойцов СВО</h1>
+          <p>🔴 Страховая компания «СОГАЗ» зафиксировала волну обращений от членов семей погибших военнослужащих, которые столкнулись с циничной схемой обмана. Преступники пытаются выманить персональные данные, чтобы получить доступ к денежным компенсациям.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section scheme" aria-labelledby="scheme-title">
+      <div class="page-container section-grid">
+        <h2 id="scheme-title">✔ Как действует преступная схема:</h2>
+        <div class="scheme__cards">
+          <article class="navy-card">
+            <p>➖ <strong>Липовые уведомления:</strong> Мошенники рассылают сообщения по электронной почте и в соцсетях.</p>
+          </article>
+          <article class="navy-card">
+            <p>➖ <strong>Предлог:</strong> Людям сообщают о якобы полагающемся «перерасчете выплат» или назначении дополнительных компенсаций.</p>
+          </article>
+          <article class="navy-card navy-card--wide">
+            <p>➖ <strong>Запрос данных:</strong> Чтобы «подтвердить право на деньги», преступники просят прислать скан страхового свидетельства и согласие на обработку персональных данных.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section signs" aria-labelledby="signs-title">
+      <div class="page-container section-grid section-grid--ruled">
+        <h2 id="signs-title">❓ Как отличить настоящий СОГАЗ от мошенников (Важно запомнить):</h2>
+        <div class="signs__list">
+          <p>➖ <strong>Почта России:</strong> Официальные уведомления СОГАЗ направляет военнослужащим и их семьям только через бумажные письма «Почты России».</p>
+          <p>➖ <strong>Официальный домен:</strong> Электронная переписка ведется исключительно с адресов в домене @sogaz.ru. Любые другие адреса (gmail, mail.ru и т.д.) — это мошенники!</p>
+          <p>➖ <strong>Никаких ссылок:</strong> Ссылки на сторонние ресурсы и просьбы ввести данные карты или паспорта в мессенджерах — это 100% обман.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section payments" aria-labelledby="payments-title">
+      <div class="page-container">
+        <div class="section-grid payments__intro">
+          <h2 id="payments-title">✔Как на самом деле проходят выплаты:</h2>
+          <p>Все компенсации осуществляются в строгом соответствии с договорами Минобороны и законом. Выплаты производятся на основании документов, которые передают военкоматы, воинские части или сами заявители официальным путем.</p>
+        </div>
+        <p class="final-warning">❗️ Не открывайте ссылки от незнакомых людей. Все выплаты идут через военкомат и официальную почту.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-container footer-top">
+      <div class="footer-links">
+        <section>
+          <h2>Выплаты</h2>
+          <a href="https://провыплаты.рф/payment/allowed">Кто может получить выплату</a>
+          <a href="https://провыплаты.рф/payment/amount">Какой предусмотрен размер выплат</a>
+          <a href="https://провыплаты.рф/payment/memo">Памятка по выплатам</a>
+        </section>
+        <section>
+          <h2>Документы</h2>
+          <a href="https://провыплаты.рф/doc/copy">Копии и подтверждения</a>
+          <a href="https://провыплаты.рф/doc/list">Необходимые документы</a>
+          <a href="https://провыплаты.рф/doc/list">Собрать пакет документов для выплат</a>
+        </section>
+        <section>
+          <h2>Сроки</h2>
+          <a href="https://провыплаты.рф/terms/doc_receive">Поступление документов в АО «СОГАЗ»</a>
+          <a href="https://провыплаты.рф/terms/payment_period">В какой срок АО «СОГАЗ» осуществляет выплату</a>
+          <a href="https://провыплаты.рф/terms/status">Узнать статус по заявлению</a>
+        </section>
+      </div>
+
+      <div class="footer-contacts">
+        <h2>Остались вопросы?</h2>
+        <p class="footer-contacts__lead">Военно-социальный центр Министерства обороны Российской Федерации</p>
+        <div class="contact-card">
+          <div>
+            <span>График приема:</span>
+            <p>понедельник – пятница с 10:00 до 17:00</p>
+          </div>
+          <div>
+            <span>Адрес:</span>
+            <p>Москва, ул. Мясницкая, д. 35</p>
+          </div>
+          <div>
+            <span>Телефон горячей линии:</span>
+            <a href="tel:+78007079999">8-800-707-99-99</a>
+          </div>
+          <div>
+            <span>Узнать статус по выплатам:</span>
+            <a href="https://forms.sogaz.ru/Pm3tu1w5K4/">Заполнить онлайн-форму</a>
+          </div>
+        </div>
+        <a class="max-link" href="https://www.gosuslugi.ru/">Спроси у робота Макса</a>
+      </div>
+    </div>
+
+    <div class="page-container footer-bottom">
+      <p class="footer-brand">АО «СОГАЗ»</p>
+      <p>АО «СОГАЗ» осуществляет выплаты в соответствии с Федеральными законами от 28 марта 1998 г. № 52-ФЗ и от 07 ноября 2011 г. № 306-ФЗ, а также Указом Президента РФ от 3 августа 2023 г. № 582</p>
+      <a href="https://www.sogaz.ru/sogaz/about/privacy_policy/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%9F%D0%94%D0%BD%20%D0%A1%D0%BE%D0%B3%D0%B0%D0%B7.pdf">Политика в отношении обработки персональных данных</a>
+    </div>
+  </footer>
+
+  <dialog class="site-dialog mobile-dialog" id="mobile-menu" aria-label="Основная навигация">
+    <div class="mobile-dialog__header">
+      <a class="mobile-dialog__brand" href="https://провыплаты.рф/" aria-label="Провыплаты — главная">
+        <img src="https://static.tildacdn.com/tild3137-3639-4436-b132-623639353838/54534.svg" alt="СОГАЗ">
+      </a>
+      <button class="dialog-close" type="button" aria-label="Закрыть меню">×</button>
+    </div>
+    <nav class="mobile-dialog__nav">
+      <button type="button" data-dialog="payments-dialog">ВЫПЛАТЫ</button>
+      <button type="button" data-dialog="terms-dialog">СРОКИ</button>
+      <a href="https://провыплаты.рф/careprogram">ПРОГРАММА ЗАБОТЫ</a>
+      <button type="button" data-dialog="documents-dialog">ДОКУМЕНТЫ</button>
+      <button type="button" data-dialog="cases-dialog">ОСОБЫЕ СЛУЧАИ</button>
+      <button type="button" data-dialog="minor-dialog">НЕСОВЕРШЕННОЛЕТНИМ</button>
+    </nav>
+  </dialog>
+
+  <dialog class="site-dialog popup-dialog" id="payments-dialog" aria-label="Выплаты">
+    <button class="dialog-close" type="button" aria-label="Закрыть">×</button>
+    <div class="popup-dialog__grid">
+      <a href="https://провыплаты.рф/payment/allowed"><strong>Кто может получить выплату</strong><span>В случае смерти военнослужащего/добровольца</span></a>
+      <a href="https://провыплаты.рф/payment/amount"><strong>Какой предусмотрен размер выплат</strong><span>Сколько заплатят по страховой</span></a>
+      <a href="https://провыплаты.рф/payment/memo"><strong>ПАМЯТКА</strong><span>Все что нужно знать о выплатах в одном месте</span></a>
+    </div>
+    <div class="popup-dialog__answers">
+      <h2>Ответы на вопросы</h2>
+      <a href="https://провыплаты.рф/tpost/f3ete7gk61-v-kakih-sluchayah-mozhno-poluchit-viplat">За какие ранения положены выплаты?</a>
+      <a href="https://провыплаты.рф/tpost/ggy9hvsfp1-kto-mozhet-poluchit-viplatu-v-sluchae-sm">Положена ли мне выплата я дочь/сын?</a>
+      <a href="https://провыплаты.рф/tpost/ggy9hvsfp1-kto-mozhet-poluchit-viplatu-v-sluchae-sm">Имеет ли право на выплаты супруга?</a>
+    </div>
+  </dialog>
+
+  <dialog class="site-dialog popup-dialog" id="terms-dialog" aria-label="Сроки">
+    <button class="dialog-close" type="button" aria-label="Закрыть">×</button>
+    <div class="popup-dialog__grid">
+      <a href="https://провыплаты.рф/terms/doc_receive"><strong>Поступление документов в АО «СОГАЗ»</strong><span>Как отследить поступление документов</span></a>
+      <a href="https://провыплаты.рф/terms/payment_period"><strong>В какой срок АО «СОГАЗ» осуществляет выплату</strong><span>Сколько будут рассматривать мое заявление</span></a>
+      <a href="https://провыплаты.рф/terms/status"><strong>УЗНАТЬ СТАТУС</strong><span>Как узнать статус по заявлению</span></a>
+    </div>
+  </dialog>
+
+  <dialog class="site-dialog popup-dialog" id="documents-dialog" aria-label="Документы">
+    <button class="dialog-close" type="button" aria-label="Закрыть">×</button>
+    <div class="popup-dialog__grid">
+      <a href="https://провыплаты.рф/doc/list"><strong>Необходимые документы</strong><span>Пакет документов для получения выплат</span></a>
+      <a href="https://провыплаты.рф/doc/copy"><strong>Копии и подтверждения</strong><span>Где получить справки и копии каких документов подходят</span></a>
+      <a href="https://провыплаты.рф/doc/list"><strong>Собрать пакет документов для выплат</strong><span>Все что нужно знать о выплатах в одном месте</span></a>
+    </div>
+  </dialog>
+
+  <dialog class="site-dialog popup-dialog" id="cases-dialog" aria-label="Особые случаи">
+    <button class="dialog-close" type="button" aria-label="Закрыть">×</button>
+    <div class="popup-dialog__answers">
+      <h2>Ответы по нестандартным ситуациям</h2>
+      <a href="https://провыплаты.рф/tpost/7mn3gi0g61-chto-delat-esli-posle-podachi-zayavleniy">Что делать, если после подачи заявления о выплатах изменился состав получателей выплат (получатель умер, родился ребенок и т.д.)?</a>
+      <a href="https://провыплаты.рф/tpost/pubzsl9v21-chto-delat-esli-odnogo-iz-poluchatelei-v">Что делать, если одного из получателей выплат не могут найти, а свидетельства о смерти нет? Будут ли зарезервированы денежные средства и сколько лет они будут храниться?</a>
+      <a href="https://провыплаты.рф/tpost/mdt884i921-kak-proizvoditsya-viplata-edinovremennog">Как производится выплата единовременного пособия, если военнослужащий, признанный не годным к службе, изъявил желание продолжить службу?</a>
+    </div>
+  </dialog>
+
+  <dialog class="site-dialog popup-dialog" id="minor-dialog" aria-label="Несовершеннолетним">
+    <button class="dialog-close" type="button" aria-label="Закрыть">×</button>
+    <div class="popup-dialog__grid">
+      <a href="https://провыплаты.рф/minor/payment"><strong>Выплаты несовершеннолетним</strong><span>Как оформить заявление</span></a>
+      <a href="https://провыплаты.рф/minor/requisites"><strong>Банковские реквизиты</strong><span>Какой счет необходим для выплат</span></a>
+      <a href="https://провыплаты.рф/quick/request"><strong>Заполнить заявление на выплату</strong><span>Как узнать статус по заявлению</span></a>
+    </div>
+  </dialog>
+</body>
+</html>
